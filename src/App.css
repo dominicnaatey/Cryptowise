@@ -31,7 +31,7 @@ a:hover{
 .main{
     flex: 0.8;
     width: 100%;
-    
+    padding-left: 245px;
 }
 .routes{
     padding: 20px;
