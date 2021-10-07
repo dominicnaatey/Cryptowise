@@ -48,3 +48,4 @@ const Cryptocurrencies = ({ simplified }) => {
 }
 
 export default Cryptocurrencies
+
