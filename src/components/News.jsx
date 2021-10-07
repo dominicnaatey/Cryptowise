@@ -44,12 +44,12 @@ const News = ({ simplified }) => {
                     <Card hoverable className='news-card'>
                         <a href={news.url} target='_blank' rel='noreferrer'>
                             <div className="news-image-container">
-                                <Title className="news-title" level={4}>{news.name}</Title>
+                                <Title style={{fontSize:'17px', fontWeight:'700', letterSpacing:'1px'}} className="news-title" level={4}>{news.name}</Title>
                                 <img style={{maxWidth:'200px', maxHeight: '100px'}} src={news?.image?.thumbnail?.contentUrl || demoImage } alt='news'/>
                             </div>
                             <p>
-                                {news.description > 100 
-                                ? `${news.description.substring(0, 100)}...`
+                                {news.description.length > 100
+                                ? `${news.description.substring(0, 100)}. . .`
                                 : news.description
                             }
                             </p>
