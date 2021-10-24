@@ -16,6 +16,8 @@ const News = ({ simplified }) => {
     const {data: cryptoNews} = useGetCryptoNewsQuery({ newsCategory, count: simplified ? 6 : 12 })
     const { data } = useGetCryptosQuery(100);
 
+    console.log(cryptoNews)
+
     if (!cryptoNews?.value) return 'loading... ';
 
     return (
@@ -43,7 +45,7 @@ const News = ({ simplified }) => {
                         <a href={news.url} target='_blank' rel='noreferrer'>
                             <div className="news-image-container">
                                 <Title style={{fontSize:'17px', fontWeight:'700', letterSpacing:'1px'}} className="news-title" level={4}>{news.name}</Title>
-                                <img style={{maxWidth:'200px', maxHeight: '100px'}} src={news?.image?.thumbnail?.contentUrl || demoImage } alt='news'/>
+                                <img style={{maxWidth:'100px', maxHeight: '100px'}} src={news?.image?.thumbnail?.contentUrl || demoImage } alt='news'/> 
                             </div>
                             <p>
                                 {news.description.length > 100
